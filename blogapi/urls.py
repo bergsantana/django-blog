@@ -9,6 +9,7 @@ schema_view = get_schema_view(
                  description="A proxy API to external CodeLeap careers endpoint"),
     public=True,
     permission_classes=(permissions.AllowAny,),
+    schemes=['http', 'https']
 )
 
 urlpatterns = [
