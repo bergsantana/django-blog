@@ -5,10 +5,6 @@ from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from django.conf import settings
 
-url="http://127.0.0.1:3333",
-if not settings.DEBUG:  # Production mode
-    url = "https://127.0.0.1:3333",
-
 
 schema_view = get_schema_view(
     openapi.Info(title="BlogPosts API", default_version='v1',
@@ -16,7 +12,8 @@ schema_view = get_schema_view(
     public=True,
     permission_classes=(permissions.AllowAny,),
    # schemes=['http', 'https']
-    url=url,
+    url= "https://127.0.0.1:3333" if not settings.DEBUG else "http://127.0.0.1:3333",
+
   
 )
 
