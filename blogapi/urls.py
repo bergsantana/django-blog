@@ -3,13 +3,21 @@ from django.urls import path, include
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
+from django.conf import settings
+
+url="http://127.0.0.1:3333",
+if not settings.DEBUG:  # Production mode
+    url = "https://127.0.0.1:3333",
+
 
 schema_view = get_schema_view(
     openapi.Info(title="BlogPosts API", default_version='v1',
                  description="A proxy API to external CodeLeap careers endpoint"),
     public=True,
     permission_classes=(permissions.AllowAny,),
-    schemes=['http', 'https']
+   # schemes=['http', 'https']
+    url=url,
+  
 )
 
 urlpatterns = [
