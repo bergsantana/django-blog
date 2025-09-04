@@ -2,11 +2,14 @@
 """  Django settings for the example project.
 This configuration is minimal for demonstration and testing. Follow HackSoftware styleguide naming and organization.
  """
+import os
 from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'replace-this-in-prod'
-DEBUG = True
+
+DEBUG = os.getenv("DJANGO_DEBUG", "True").lower() == "true"
+
 ALLOWED_HOSTS = ['*']
 
 # Installed apps follow the styleguide: django apps, third-party apps, local apps

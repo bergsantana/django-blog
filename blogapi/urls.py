@@ -5,7 +5,6 @@ from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from django.conf import settings
 
-
 schema_view = get_schema_view(
     openapi.Info(title="BlogPosts API", default_version='v1',
                  description="A proxy API to external CodeLeap careers endpoint"),
@@ -13,8 +12,6 @@ schema_view = get_schema_view(
     permission_classes=(permissions.AllowAny,),
    # schemes=['http', 'https']
     url= "https://127.0.0.1:3333" if not settings.DEBUG else "http://127.0.0.1:3333",
-
-  
 )
 
 urlpatterns = [
