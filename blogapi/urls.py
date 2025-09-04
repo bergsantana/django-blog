@@ -13,7 +13,7 @@ schema_view = get_schema_view(
     public=True,
     permission_classes=(permissions.AllowAny,),
    # schemes=['http', 'https']
-    url= "https://127.0.0.1:3333" if dev_deployed else "http://127.0.0.1:3333",
+    #url= "https://127.0.0.1:3333" if dev_deployed else "http://127.0.0.1:3333",
 )
 
 urlpatterns = [
