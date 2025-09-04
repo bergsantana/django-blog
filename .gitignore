@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.so
+*.egg-info/
+*.egg
+dist/
+build/
+
+# Django
+db.sqlite3
+media/
+staticfiles/
+*.log
+
+# Migrations (optional, keep if you want migrations in repo)
+# */migrations/*
+# !*/migrations/__init__.py
+
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Tests / coverage
+.coverage
+htmlcov/
+.pytest_cache/
+.cache/
+junit.xml
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Local files
+*.local
