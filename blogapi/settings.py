@@ -3,14 +3,28 @@
 This configuration is minimal for demonstration and testing. Follow HackSoftware styleguide naming and organization.
  """
 import os
+import environ
 from pathlib import Path
+ 
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Initialize environ
+env = environ.Env(
+    DEBUG=(bool, True)
+)
+
+# Load .env file
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 SECRET_KEY = 'replace-this-in-prod'
 
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
+
+DJANGO_DEVELOPMENT_DEPLOYED = env("DJANGO_DEVELOPMENT_DEPLOYED")
+
+DJANGO_API_URL = env("DJANGO_API_URL")
 
 # Installed apps follow the styleguide: django apps, third-party apps, local apps
 INSTALLED_APPS = [
