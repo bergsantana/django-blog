@@ -24,3 +24,33 @@ Create a virtualenv and install dependencies from requirements.txt (Python 3.10+
    python -m venv .venv
    source .venv/bin/activate  # Windows: .venv\\Scripts\\activate
    pip install -r requirements.txt
+   python manage.py migrate
+
+   ```
+2. Install Dependencies
+   ```
+   DJANGO_DEVELOPMENT_DEPLOYED= 
+   DJANGO_API_URL= 
+   ```
+
+3. Run server:
+   ```
+      ./run.sh
+   ```
+ 
+## 🚀 Deployment
+ 
+## **Swagger Docs available at**  
+👉[https://django-blog-csem.onrender.com/swagger/](Swagger UI)
+ 
+ 
+---
+
+---
+## 📖 API Endpoints
+
+1. **GET /api/posts/** - Retrieve all posts
+2. **POST /api/posts/** - Create a new post
+3. **PATCH /api/posts/{id}/** - Partially update an existing post
+4. **DELETE /api/posts/{id}/** - Delete an existing post
+
