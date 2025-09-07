@@ -41,7 +41,8 @@ Create a virtualenv and install dependencies from requirements.txt (Python 3.10+
 ## 🚀 Deployment
  
 ## **Swagger Docs available at**  
-👉[https://django-blog-csem.onrender.com/swagger/](Swagger UI)
+👉 [Swagger UI ](https://django-blog-csem.onrender.com/swagger/)
+(Might take a while to Render load the App, wait a bit)
  
  
 ---
